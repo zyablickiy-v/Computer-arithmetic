@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<script>var eel = {};</script>
+		<script src="eel.js"></script>
+		<style>
+			html, body {
+				margin: 0px;
+				padding: 0px;
+			}
+			input[type="checkbox"] {
+				display: none;
+			}
+			span.checkbox {
+				cursor: pointer;
+				padding-left: 10px;
+			}
+			span.checkbox::before {
+				transition: 0.3s ease-out;
+				display: inline-block;
+				content: '';
+				width: 15px;
+				height: 15px;
+				background: #FFF;
+				vertical-align: middle;
+				margin-left: -5px;
+				margin-right: 5px;
+				border: 1px solid white;
+			}
+			input[type="checkbox"]:checked + span.checkbox::before {
+				background: #5AF;
+			}
+			input[type="button"].cross {
+				clear: both;
+				float: right;
+				display: inline-block;
+				position: relative;
+				top: 0pt;
+				right: 0pt;
+				background: transparent;
+				border-color: transparent;
+				margin-top: 0px;
+				padding-left: 7pt;
+				padding-right: 7pt;
+			}
+			input[type="button"].cross:hover {
+				background: #C00;
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>
+			<strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+	</body>
+</html>
